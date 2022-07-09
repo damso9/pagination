@@ -9,6 +9,11 @@ function App() {
   const [pageData, setPageData] = useState(null);
   const [isChange, setIsChange] = useState(false);
 
+
+  const handleClick = (inputIndex) => {
+    setPageIndex(inputIndex)
+    setIsChange(!isChange)
+  }
   const handleNext = () => {
     setPageIndex((prev) => {
       if (prev >= data.length - 1) {
@@ -28,7 +33,7 @@ function App() {
     })
     setIsChange(!isChange)
   }
-
+  
   useEffect(() => {
     if (data) {
       setAllData(data);
@@ -59,6 +64,7 @@ function App() {
                     index === pageIndex ? `page-btn active-btn` : `page-btn`
                   }
                   key={index}
+                  onClick={() => {handleClick(index)}}
                 >
                   {index + 1}
                 </button>
