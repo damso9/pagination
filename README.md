@@ -1,4 +1,4 @@
-##Built a Pagination functionality built with ReactJS
+## Built a Pagination functionality built with ReactJS
 
-###Live Link
+### Live Link
 Demo - https://dammie-pagination.netlify.app
